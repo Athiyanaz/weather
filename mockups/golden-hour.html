@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup: Golden Hour</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#ececec;font-family:Arial,Helvetica,sans-serif;color:#333}
+.board{padding:24px 16px 48px}
+.board h1{margin:0 0 4px;font-size:26px}
+.board p.note{margin:0 0 24px;color:#666;max-width:760px}
+.board h2.sec{margin:32px 0 12px;font-size:20px}
+.wrap{overflow-x:auto;padding-bottom:12px}
+.grid{display:flex;flex-wrap:wrap;gap:20px}
+.laptopgrid{width:1560px}
+.phonegrid{width:1440px;flex-wrap:nowrap}
+.frame figcaption{font-size:13px;color:#555;margin-bottom:6px}
+.frame{margin:0}
+.screen{position:relative;overflow:hidden;border:6px solid #222;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.screen.laptop{width:760px;height:540px;border-radius:14px}
+.screen.phone{width:340px;height:640px;border-radius:30px}
+.scene{position:absolute;inset:0}
+.scene *{position:absolute}
+.app{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{position:relative;background:var(--card-bg);color:var(--fg);border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;font-family:var(--font)}
+.laptop .card{width:460px;padding:28px}
+.phone .card{width:100%;padding:22px 16px}
+.title{margin:0 0 16px;font-weight:normal;color:var(--accent);letter-spacing:.5px}
+.laptop .title{font-size:34px}.phone .title{font-size:28px}
+.search{display:flex;gap:8px}
+.search input{flex:1;min-width:0;padding:11px 12px;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:var(--ibtn-radius);background:var(--input-bg);color:var(--fg)}
+.search input::placeholder{color:var(--muted)}
+.search button{padding:11px 16px;font:inherit;font-size:16px;border:0;border-radius:var(--ibtn-radius);background:var(--accent);color:var(--btn-fg);cursor:pointer}
+.status{margin:18px 0 0;font-size:18px}
+.loading{color:var(--muted);font-style:italic}
+.notfound{background:var(--soft);border-radius:12px;padding:14px;line-height:1.4}
+.result{margin-top:18px}
+.city{font-size:22px}
+.time{font-size:14px;color:var(--muted);margin-top:2px}
+.now{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.icon{font-size:56px;line-height:1}
+.temp{font-size:64px;line-height:1;color:var(--accent)}
+.phone .temp{font-size:56px}
+.desc{font-size:18px;margin-top:4px;font-style:italic}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.details div{background:var(--soft);border-radius:12px;padding:10px 4px}
+.details span{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}
+.details b{font-weight:normal;font-size:16px}
+.phone .details b{font-size:14px}
+
+.screen{--card-bg:rgba(255,248,235,.88);--fg:#5a2e1a;--accent:#d9582b;--muted:#9a6a50;--btn-fg:#fff;--border:1px solid rgba(255,255,255,.7);--radius:24px;--shadow:0 12px 30px rgba(120,40,10,.3);--font:Georgia,'Times New Roman',serif;--line:#e8c9a8;--input-bg:#fff;--soft:rgba(255,214,170,.45);--ibtn-radius:12px}
+.scene{background:linear-gradient(#f59a5c 0%,#ff7e6b 45%,#ffd27a 100%)}
+.sun{left:50%;bottom:8%;width:42%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,#fff6b0 0%,#ffd45a 60%,#ffb347 100%);box-shadow:0 0 80px 40px rgba(255,220,120,.6)}
+.cloud{aspect-ratio:3/1;background:rgba(255,255,255,.7);border-radius:999px}
+.cloud::before,.cloud::after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cloud::before{width:42%;aspect-ratio:1;left:14%;top:-45%}
+.cloud::after{width:55%;aspect-ratio:1;left:40%;top:-60%}
+.c1{width:22%;left:6%;top:10%}.c2{width:18%;right:8%;top:22%}.c3{width:16%;left:12%;bottom:30%;opacity:.7}
+.hill{border-radius:50%;background:#c4462a}
+.h1{width:80%;aspect-ratio:3/1;left:-20%;bottom:-8%}
+.h2{width:90%;aspect-ratio:3/1;right:-25%;bottom:-10%;background:#a63620}
+</style>
+</head>
+<body>
+<div class="board">
+<h1>Golden Hour</h1>
+<p class="note">A warm sunset sky with a big sun, soft clouds and glowing hills. A creamy card sits in the middle, with elegant serif letters. Design only: nothing works yet and the weather values are made up. Scroll sideways to see all screens.</p>
+<h2 class="sec">Laptop screen</h2>
+<div class="wrap"><div class="grid laptopgrid"><figure class="frame"><figcaption>Laptop · 1. Before searching</figcaption><div class="screen laptop"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div></div></div></div></figure><figure class="frame"><figcaption>Laptop · 2. Loading</figcaption><div class="screen laptop"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status loading">Loading...</p></div></div></div></figure><figure class="frame"><figcaption>Laptop · 3. Weather result</figcaption><div class="screen laptop"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><div class="result"><div class="city">London, United Kingdom</div><div class="time">Saturday 15 Nov, 14:30</div><div class="now"><div class="icon">⛅</div><div class="temp">24°C</div></div><div class="desc">Partly cloudy</div><div class="details"><div><span>Feels like</span><b>23°C</b></div><div><span>Humidity</span><b>60%</b></div><div><span>Wind</span><b>14 km/h NW</b></div></div></div></div></div></div></figure><figure class="frame"><figcaption>Laptop · 4. City not found</figcaption><div class="screen laptop"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status notfound">🔍 Sorry, we couldn't find that city. Check the spelling and try again.</p></div></div></div></figure></div></div>
+<h2 class="sec">Phone screen</h2>
+<div class="wrap"><div class="grid phonegrid"><figure class="frame"><figcaption>Phone · 1. Before searching</figcaption><div class="screen phone"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div></div></div></div></figure><figure class="frame"><figcaption>Phone · 2. Loading</figcaption><div class="screen phone"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status loading">Loading...</p></div></div></div></figure><figure class="frame"><figcaption>Phone · 3. Weather result</figcaption><div class="screen phone"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><div class="result"><div class="city">London, United Kingdom</div><div class="time">Saturday 15 Nov, 14:30</div><div class="now"><div class="icon">⛅</div><div class="temp">24°C</div></div><div class="desc">Partly cloudy</div><div class="details"><div><span>Feels like</span><b>23°C</b></div><div><span>Humidity</span><b>60%</b></div><div><span>Wind</span><b>14 km/h NW</b></div></div></div></div></div></div></figure><figure class="frame"><figcaption>Phone · 4. City not found</figcaption><div class="screen phone"><div class="scene"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status notfound">🔍 Sorry, we couldn't find that city. Check the spelling and try again.</p></div></div></div></figure></div></div>
+</div>
+</body>
+</html>
