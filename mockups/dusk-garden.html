@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup: Dusk Garden</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#ececec;font-family:Arial,Helvetica,sans-serif;color:#333}
+.board{padding:24px 16px 48px}
+.board h1{margin:0 0 4px;font-size:26px}
+.board p.note{margin:0 0 24px;color:#666;max-width:760px}
+.board h2.sec{margin:32px 0 12px;font-size:20px}
+.wrap{overflow-x:auto;padding-bottom:12px}
+.grid{display:flex;flex-wrap:wrap;gap:20px}
+.laptopgrid{width:1560px}
+.phonegrid{width:1440px;flex-wrap:nowrap}
+.frame figcaption{font-size:13px;color:#555;margin-bottom:6px}
+.frame{margin:0}
+.screen{position:relative;overflow:hidden;border:6px solid #222;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.screen.laptop{width:760px;height:540px;border-radius:14px}
+.screen.phone{width:340px;height:640px;border-radius:30px}
+.scene{position:absolute;inset:0}
+.scene *{position:absolute}
+.app{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{position:relative;background:var(--card-bg);color:var(--fg);border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;font-family:var(--font)}
+.laptop .card{width:460px;padding:28px}
+.phone .card{width:100%;padding:22px 16px}
+.title{margin:0 0 16px;font-weight:normal;color:var(--accent);letter-spacing:.5px}
+.laptop .title{font-size:34px}.phone .title{font-size:28px}
+.search{display:flex;gap:8px}
+.search input{flex:1;min-width:0;padding:11px 12px;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:var(--ibtn-radius);background:var(--input-bg);color:var(--fg)}
+.search input::placeholder{color:var(--muted)}
+.search button{padding:11px 16px;font:inherit;font-size:16px;border:0;border-radius:var(--ibtn-radius);background:var(--accent);color:var(--btn-fg);cursor:pointer}
+.status{margin:18px 0 0;font-size:18px}
+.loading{color:var(--muted);font-style:italic}
+.notfound{background:var(--soft);border-radius:12px;padding:14px;line-height:1.4}
+.result{margin-top:18px}
+.city{font-size:22px}
+.time{font-size:14px;color:var(--muted);margin-top:2px}
+.now{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.icon{font-size:56px;line-height:1}
+.temp{font-size:64px;line-height:1;color:var(--accent)}
+.phone .temp{font-size:56px}
+.desc{font-size:18px;margin-top:4px;font-style:italic}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.details div{background:var(--soft);border-radius:12px;padding:10px 4px}
+.details span{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}
+.details b{font-weight:normal;font-size:16px}
+.phone .details b{font-size:14px}
+
+.screen{--card-bg:rgba(44,22,52,.88);--fg:#fbeacb;--accent:#f2b84b;--muted:#c9a9b8;--btn-fg:#3a1c3f;--border:1px solid rgba(242,184,75,.6);--radius:22px;--shadow:0 0 36px rgba(242,184,75,.28);--font:Georgia,'Times New Roman',serif;--line:#7a4a73;--input-bg:rgba(255,255,255,.08);--soft:rgba(255,255,255,.08);--ibtn-radius:999px}
+.scene{background:linear-gradient(#2b1b4a 0%,#8a3a6b 55%,#ff8a4c 100%)}
+.stars{left:0;top:0;width:3px;height:3px;border-radius:50%;box-shadow:8% 10% 0 0 #fff,20% 22% 0 0 #fff,33% 8% 0 0 #fff,47% 18% 0 0 #fff,60% 7% 0 0 #fff,72% 24% 0 0 #fff,85% 12% 0 0 #fff,93% 28% 0 0 #fff,14% 35% 0 0 #fff,40% 30% 0 0 #fff,66% 38% 0 0 #fff,90% 45% 0 0 #fff,5% 48% 0 0 #fff,52% 42% 0 0 #fff}
+.moon{right:10%;top:8%;width:11%;aspect-ratio:1;border-radius:50%;background:#fff3c4;box-shadow:0 0 30px 10px rgba(255,243,196,.4)}
+.hill{border-radius:50%;background:#2a1636}
+.h1{width:90%;aspect-ratio:3/1;left:-25%;bottom:-9%}
+.h2{width:80%;aspect-ratio:3/1;right:-20%;bottom:-8%;background:#3a1d45}
+.tree{width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:60px solid #1c0f26}
+.t1{left:6%;bottom:9%}.t2{left:14%;bottom:7%;transform:scale(.75)}.t3{right:8%;bottom:8%}.t4{right:15%;bottom:6%;transform:scale(.7)}
+.glow{left:50%;bottom:0;width:60%;aspect-ratio:2/1;transform:translateX(-50%);border-radius:50% 50% 0 0;background:radial-gradient(ellipse at bottom,rgba(255,170,90,.6),transparent 70%)}
+</style>
+</head>
+<body>
+<div class="board">
+<h1>Dusk Garden</h1>
+<p class="note">An evening sky from purple to orange, with stars, a moon, hills and trees. A dark plum card glows softly, with cream and gold serif letters. Design only: nothing works yet and the weather values are made up. Scroll sideways to see all screens.</p>
+<h2 class="sec">Laptop screen</h2>
+<div class="wrap"><div class="grid laptopgrid"><figure class="frame"><figcaption>Laptop · 1. Before searching</figcaption><div class="screen laptop"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div></div></div></div></figure><figure class="frame"><figcaption>Laptop · 2. Loading</figcaption><div class="screen laptop"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status loading">Loading...</p></div></div></div></figure><figure class="frame"><figcaption>Laptop · 3. Weather result</figcaption><div class="screen laptop"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><div class="result"><div class="city">London, United Kingdom</div><div class="time">Saturday 15 Nov, 14:30</div><div class="now"><div class="icon">⛅</div><div class="temp">24°C</div></div><div class="desc">Partly cloudy</div><div class="details"><div><span>Feels like</span><b>23°C</b></div><div><span>Humidity</span><b>60%</b></div><div><span>Wind</span><b>14 km/h NW</b></div></div></div></div></div></div></figure><figure class="frame"><figcaption>Laptop · 4. City not found</figcaption><div class="screen laptop"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status notfound">🔍 Sorry, we couldn't find that city. Check the spelling and try again.</p></div></div></div></figure></div></div>
+<h2 class="sec">Phone screen</h2>
+<div class="wrap"><div class="grid phonegrid"><figure class="frame"><figcaption>Phone · 1. Before searching</figcaption><div class="screen phone"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div></div></div></div></figure><figure class="frame"><figcaption>Phone · 2. Loading</figcaption><div class="screen phone"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status loading">Loading...</p></div></div></div></figure><figure class="frame"><figcaption>Phone · 3. Weather result</figcaption><div class="screen phone"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><div class="result"><div class="city">London, United Kingdom</div><div class="time">Saturday 15 Nov, 14:30</div><div class="now"><div class="icon">⛅</div><div class="temp">24°C</div></div><div class="desc">Partly cloudy</div><div class="details"><div><span>Feels like</span><b>23°C</b></div><div><span>Humidity</span><b>60%</b></div><div><span>Wind</span><b>14 km/h NW</b></div></div></div></div></div></div></figure><figure class="frame"><figcaption>Phone · 4. City not found</figcaption><div class="screen phone"><div class="scene"><i class="stars"></i><i class="moon"></i><i class="glow"></i><i class="hill h1"></i><i class="hill h2"></i><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i></div><div class="app"><div class="card"><h2 class="title">Weather App</h2><div class="search"><input type="text" placeholder="Type a city name..." readonly><button type="button">Search</button></div><p class="status notfound">🔍 Sorry, we couldn't find that city. Check the spelling and try again.</p></div></div></div></figure></div></div>
+</div>
+</body>
+</html>
