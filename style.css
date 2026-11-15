@@ -15,6 +15,28 @@ body {
 }
 .scene * { position: absolute; }
 
+.stars {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background:
+    radial-gradient(circle at 8% 10%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 20% 26%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 33% 8%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 47% 20%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 60% 9%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 72% 30%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 93% 34%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 14% 44%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 40% 34%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 66% 46%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 90% 52%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 5% 60%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 52% 56%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 27% 70%, #fff 0, #fff 1px, transparent 2px),
+    radial-gradient(circle at 80% 62%, #fff 0, #fff 1px, transparent 2px);
+}
 .moon {
   right: 10%;
   top: 8%;
