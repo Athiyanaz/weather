@@ -7,7 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Weather App</h1>
+  <div class="scene" aria-hidden="true">
+    <div class="moon"></div>
+    <div class="glow"></div>
+    <div class="hill h1"></div>
+    <div class="hill h2"></div>
+    <div class="tree t1"></div>
+    <div class="tree t2"></div>
+    <div class="tree t3"></div>
+    <div class="tree t4"></div>
+  </div>
+
+  <main class="app">
+    <div class="card">
+      <h1 class="title">Weather App</h1>
+      <div class="search">
+        <input type="text" placeholder="Type a city name..." aria-label="City name">
+        <button type="button">Search</button>
+      </div>
+    </div>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
